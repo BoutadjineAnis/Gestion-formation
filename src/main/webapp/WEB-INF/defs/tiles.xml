@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="common" template="/WEB-INF/views/layouts/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="commonLogin" template="/WEB-INF/views/layouts/classicLogin.jsp">
+		<put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="login" extends="commonLogin">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<definition name="afficherUtilisateurs" extends="common">
+		<put-attribute name="title" value="DRHF" />
+		<put-attribute name="body" value="/WEB-INF/views/afficherUtilisateurs.jsp" />
+	</definition>
+	
+	<definition name="ajouterUtilisateur" extends="common">
+		<put-attribute name="title" value="DRHF" />
+		<put-attribute name="body" value="/WEB-INF/views/ajouterUtilisateur.jsp" />
+	</definition>
+	
+</tiles-definitions>
